@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright © 2016 Magestore. All rights reserved.
+  ~ See COPYING.txt for license details.
+  -->
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="inventorysuccess_transferstock_external_new"/>
+    <head>
+        <css src="Magestore_InventorySuccess::css/inventory.css"/>
+    </head>
+    <referenceContainer name="os_transferstock_external_form">
+        <block class="Magestore\InventorySuccess\Block\Adminhtml\TransferStock\Import\ImportTransferExternalForm" name="import-transfer-form">
+            <arguments>
+                <argument name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true"> </item>
+                    <item name="collapsible" xsi:type="boolean">false</item>
+                    <item name="opened" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="string">22</item>
+                    <item name="canShow" xsi:type="boolean">true</item>
+                    <item name="componentType" xsi:type="string">fieldset</item>
+                </argument>
+            </arguments>
+        </block>
+    </referenceContainer>
+    <referenceContainer name="content">
+        <block class="Magestore\InventorySuccess\Block\Adminhtml\Import\NoticeMessage"
+               name="inventory_success_message" template="Magestore_InventorySuccess::import/success/message.phtml" before="-"/>
+    </referenceContainer>
+</page>

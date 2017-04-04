@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright © 2016 Magestore. All rights reserved.
+  ~ See COPYING.txt for license details.
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magestore\InventorySuccess\Api\Data\Warehouse\WarehouseInterface"
+                type="Magestore\InventorySuccess\Model\Warehouse" />
+
+    <preference for="Magestore\InventorySuccess\Api\Data\Warehouse\ProductInterface"
+                type="Magestore\InventorySuccess\Model\Warehouse\Product" />
+
+    <preference for="Magestore\InventorySuccess\Api\Data\Permission\PermissionInterface"
+                type="Magestore\InventorySuccess\Model\Permission\Permission" />
+
+    <preference for="Magestore\InventorySuccess\Api\Warehouse\Location\MappingManagementInterface"
+                type="Magestore\InventorySuccess\Model\Warehouse\Location\MappingManagement" />
+
+    <preference for="Magestore\InventorySuccess\Api\Permission\PermissionManagementInterface"
+                type="Magestore\InventorySuccess\Model\Permission\PermissionManagement" />
+
+    <preference for="Magestore\InventorySuccess\Api\AdjustStock\AdjustStockManagementInterface"
+                type="Magestore\InventorySuccess\Model\AdjustStock\AdjustStockManagement" />
+
+    <preference for="Magestore\InventorySuccess\Api\Stocktaking\StocktakingManagementInterface"
+                type="Magestore\InventorySuccess\Model\Stocktaking\StocktakingManagement" />
+
+    <preference for="Magestore\InventorySuccess\Api\StockActivity\ProductSelectionManagementInterface"
+                type="Magestore\InventorySuccess\Model\StockActivity\ProductSelectionManagement" />
+
+    <preference for="Magestore\InventorySuccess\Api\StockActivity\StockChangeInterface"
+                type="Magestore\InventorySuccess\Model\StockActivity\StockChange" />
+
+    <preference for="Magestore\InventorySuccess\Api\Db\QueryProcessorInterface"
+                type="Magestore\InventorySuccess\Model\Db\QueryProcessor" />
+
+    <preference for="Magestore\InventorySuccess\Api\Warehouse\WarehouseStockRegistryInterface"
+                type="Magestore\InventorySuccess\Model\Warehouse\WarehouseStockRegistry" />
+
+    <preference for="Magestore\InventorySuccess\Api\Warehouse\WarehouseStockRepositoryInterface"
+                type="Magestore\InventorySuccess\Model\Warehouse\WarehouseStockRepository" />
+
+    <preference for="Magestore\InventorySuccess\Model\ProviderInterface\Warehouse\WarehouseStockRegistryProviderInterface"
+                type="Magestore\InventorySuccess\Model\Provider\Warehouse\WarehouseStockRegistryProvider"/>
+
+    <preference for="Magestore\InventorySuccess\Api\Warehouse\WarehouseManagementInterface"
+                type="Magestore\InventorySuccess\Model\Warehouse\WarehouseManagement" />
+
+    <preference for="Magestore\InventorySuccess\Api\Warehouse\WarehouseRepositoryInterface"
+                type="Magestore\InventorySuccess\Model\Warehouse\WarehouseRepository" />
+
+    <preference for="Magestore\InventorySuccess\Api\Data\Warehouse\UpdateWarehouseStockRequestInterface"
+                type="Magestore\InventorySuccess\Model\Warehouse\UpdateWarehouseStockRequest" />
+
+    <preference for="Magestore\InventorySuccess\Api\Warehouse\OrderItemManagementInterface"
+                type="Magestore\InventorySuccess\Model\Warehouse\OrderItemManagement" />
+    
+    <preference for="Magestore\InventorySuccess\Api\Warehouse\ShipmentItemManagementInterface"
+                type="Magestore\InventorySuccess\Model\Warehouse\ShipmentItemManagement" />    
+    
+    <preference for="Magestore\InventorySuccess\Api\Warehouse\CreditmemoItemManagementInterface"
+                type="Magestore\InventorySuccess\Model\Warehouse\CreditmemoItemManagement" />       
+
+    <preference for="Magestore\InventorySuccess\Api\InstallManagementInterface"
+                type="Magestore\InventorySuccess\Model\InstallManagement" />
+
+    <preference for="Magestore\InventorySuccess\Api\Helper\SystemInterface"
+                type="Magestore\InventorySuccess\Helper\System" />
+
+    <preference for="Magestore\InventorySuccess\Api\IncrementIdManagementInterface"
+                type="Magestore\InventorySuccess\Model\IncrementId\IncrementIdManagement" />
+
+    <preference for="Magestore\InventorySuccess\Api\Data\AdjustStock\AdjustStockInterface"
+                type="Magestore\InventorySuccess\Model\AdjustStock" />
+
+    <preference for="Magestore\InventorySuccess\Api\Data\AdjustStock\ProductInterface"
+                type="Magestore\InventorySuccess\Model\AdjustStock\Product" />
+
+    <preference for="Magestore\InventorySuccess\Api\OrderProcess\PlaceNewOrderInterface"
+                type="Magestore\InventorySuccess\Model\OrderProcess\PlaceNewOrder" />
+
+    <preference for="Magestore\InventorySuccess\Api\OrderProcess\CreateShipmentInterface"
+                type="Magestore\InventorySuccess\Model\OrderProcess\CreateShipment" />
+
+    <preference for="Magestore\InventorySuccess\Api\OrderProcess\CreateCreditmemoInterface"
+                type="Magestore\InventorySuccess\Model\OrderProcess\CreateCreditmemo" />
+
+    <preference for="Magestore\InventorySuccess\Api\OrderProcess\CancelOrderInterface"
+                type="Magestore\InventorySuccess\Model\OrderProcess\CancelOrder" />
+
+    <preference for="Magestore\InventorySuccess\Api\Logger\LoggerInterface"
+                type="Magestore\InventorySuccess\Model\Logger\Logger" />
+
+    <preference for="Magestore\InventorySuccess\Api\Data\StockMovement\StockMovementInterface"
+                type="Magestore\InventorySuccess\Model\StockMovement" />
+
+    <preference for="Magestore\InventorySuccess\Api\AdjustStock\AdjustStockRepositoryInterface"
+                type="Magestore\InventorySuccess\Model\AdjustStock\AdjustStockRepository" />
+
+    <preference for="Magestore\InventorySuccess\Api\Data\AdjustStock\CreateAdjustStockRequestInterface"
+                type="Magestore\InventorySuccess\Model\Data\AdjustStock\CreateAdjustStockRequest" />
+
+    <preference for="Magestore\InventorySuccess\Api\StockActivity\StockMovementActionInterface"
+                type="Magestore\InventorySuccess\Model\StockActivity\StockMovementAction" />
+    
+    <preference for="Magestore\InventorySuccess\Api\LowStockNotification\RuleManagementInterface"
+                type="Magestore\InventorySuccess\Model\LowStockNotification\RuleManagement" />    
+
+    <type name="Magestore\InventorySuccess\Model\StockActivity\StockMovementProvider">
+        <arguments>
+            <argument name="actionProviders" xsi:type="array">
+                <!--<item name="add_product" xsi:type="object">Magestore\InventorySuccess\Model\StockMovement\Options\AdjustStockMovementMask</item>-->
+                <item name="adjustment" xsi:type="object">Magestore\InventorySuccess\Model\AdjustStock\StockMovementActivity\Adjustment</item>
+                <item name="sales_shipment" xsi:type="object">Magestore\InventorySuccess\Model\OrderProcess\StockMovementActivity\SalesShipment</item>
+                <item name="sales_refund" xsi:type="object">Magestore\InventorySuccess\Model\OrderProcess\StockMovementActivity\SalesRefund</item>
+                <item name="transferstock" xsi:type="object">Magestore\InventorySuccess\Model\TransferStock\StockMovementActivity\Transfer</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="os_warehouse_listing_data_source" xsi:type="string">Magestore\InventorySuccess\Model\ResourceModel\Warehouse\Grid\Collection</item>
+                <item name="os_stockmovement_listing_data_source" xsi:type="string">Magestore\InventorySuccess\Model\ResourceModel\StockMovement\Grid\Collection</item>
+                <item name="os_warehouse_stockmovement_listing_data_source" xsi:type="string">Magestore\InventorySuccess\Model\ResourceModel\StockMovement\Grid\Collection</item>
+                <item name="os_adjuststock_listing_data_source" xsi:type="string">Magestore\InventorySuccess\Model\ResourceModel\AdjustStock\Grid\Collection</item>
+                <item name="os_stocktaking_listing_data_source" xsi:type="string">Magestore\InventorySuccess\Model\ResourceModel\Stocktaking\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Magento\Shipping\Block\Adminhtml\Create\Items">
+        <plugin name="BeforeShippingCreateItems" type="Magestore\InventorySuccess\Plugin\OrderProcess\BeforeShippingCreateItems" sortOrder="1" disabled="false"/>
+    </type>
+
+    <type name="\Magento\Sales\Block\Adminhtml\Order\Creditmemo\Create\Items">
+        <plugin name="BeforeCreditmemoCreateItems" type="Magestore\InventorySuccess\Plugin\OrderProcess\BeforeCreditmemoCreateItems" sortOrder="1" disabled="false"/>
+    </type>
+
+    <type name="\Magento\Sales\Block\Adminhtml\Order\Creditmemo\View\Items">
+        <plugin name="BeforeCreditmemoViewItems" type="Magestore\InventorySuccess\Plugin\OrderProcess\BeforeCreditmemoViewItems" sortOrder="1" disabled="false"/>
+    </type>
+
+  
+    <!-- modify Magento_CatalogInventory -->
+    <type name="\Magento\CatalogInventory\Model\Configuration">
+        <plugin name="inventorysuccess_model_cataloginventory_configuration" type="Magestore\InventorySuccess\Plugin\CatalogInventory\Model\Configuration"
+                sortOrder="1"
+                disabled="false"/>
+    </type>
+  
+    <preference for="Magento\CatalogInventory\Model\ResourceModel\Indexer\Stock\DefaultStock"
+                type="Magestore\InventorySuccess\Plugin\CatalogInventory\Model\ResourceModel\Indexer\Stock\DefaultStock" />   
+    
+    <preference for="Magento\ConfigurableProduct\Model\ResourceModel\Indexer\Stock\Configurable"
+                type="Magestore\InventorySuccess\Plugin\CatalogInventory\Model\ResourceModel\Indexer\Stock\Configurable" /> 
+    
+    <type name="\Magento\CatalogInventory\Model\StockRegistryProvider">
+        <plugin name="inventorysuccess_model_StockRegistryProvider" type="Magestore\InventorySuccess\Plugin\CatalogInventory\Model\StockRegistryProvider" sortOrder="1" disabled="false"/>
+    </type>
+    
+    <preference for="Magento\CatalogInventory\Ui\DataProvider\Product\AddQuantityFieldToCollection"
+                type="Magestore\InventorySuccess\Ui\DataProvider\Product\AddQuantityFieldToCollection" />        
+    
+    <!--
+    <type name="\Magento\CatalogInventory\Model\StockManagement">
+        <plugin name="inventorysuccess_model_StockManagement" type="Magestore\InventorySuccess\Plugin\CatalogInventory\Model\StockManagement" sortOrder="1" disabled="false"/>
+    </type>       
+    
+    <type name="\Magento\CatalogInventory\Model\StockRegistryProvider">
+        <plugin name="inventorysuccess_model_StockRegistryProvider" type="Magestore\InventorySuccess\Plugin\CatalogInventory\Model\StockRegistryProvider" sortOrder="1" disabled="false"/>
+    </type>                            
+  
+    <type name="\Magento\ConfigurableProduct\Model\Product\Type\Configurable">
+        <plugin name="inventorysuccess_model_Configurable" type="Magestore\InventorySuccess\Plugin\ConfigurableProduct\Model\Product\Type\Configurable" sortOrder="1" disabled="false"/>
+    </type>        
+  
+    <preference for="Magento\CatalogInventory\Model\ResourceModel\Indexer\Stock\DefaultStock"
+                type="Magestore\InventorySuccess\Plugin\CatalogInventory\Model\ResourceModel\Indexer\Stock\DefaultStock" />     
+    -->
+    
+</config>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Controller/Adminhtml/AdjustStock/DownloadInvalidCsv.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Controller/Adminhtml/ManageStock/Product/Grid.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Ui/DataProvider/TransferStock/External/Form/Modifier/ProductList.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Controller/Adminhtml/Stocktaking/DownloadSample.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Ui/DataProvider/TransferStock/External/Form/StockSummary.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Controller/Adminhtml/TransferStock/Request/DownloadProductCsvSample.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Block/Adminhtml/TransferStock/External/Edit/Button/SaveButton.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Block/Adminhtml/TransferStock/Send/Edit/Button/DirectTransferButton.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Block/Adminhtml/ManageStock/Stock/Fieldset/Product.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Block/Adminhtml/TransferStock/Send/Edit/Button/SaveButton.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Setup/InstallData.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Ui/DataProvider/TransferStock/External/Form/Modifier/ExternalStock.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Ui/DataProvider/TransferStock/External/Form/ImportProduct.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Controller/Adminhtml/Stocktaking/Stocktaking.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Ui/DataProvider/TransferStock/FromExternalHistory.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Setup/InstallSchema.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Controller/Adminhtml/AdjustStock/DownloadSample.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Model/ResourceModel/InstallManagement.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Block/Adminhtml/TransferStock/Request/Edit/Button/SaveButton.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Ui/DataProvider/TransferStock/Request/Form/Modifier/ProductList.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Block/Adminhtml/ManageStock/Stock/Fieldset/Product/Renderer/View.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/view/adminhtml/ui_component/os_transferstock_external_form.xml</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Ui/DataProvider/TransferStock/External/Form/WarehouseProductStockListing.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Block/Adminhtml/TransferStock/External/Edit/Button/TransferButton.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Ui/DataProvider/TransferStock/RequestStockHistory.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Block/Adminhtml/TransferStock/Send/Edit/Button/TransferButton.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Block/Adminhtml/TransferStock/Request/Edit/Button/TransferButton.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Block/Adminhtml/ManageStock/Stock/Fieldset/Product/Grid.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Controller/Adminhtml/Stocktaking/DownloadInvalidCsv.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Block/Adminhtml/TransferStock/Import/ImportDeliveryForm.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/etc/acl.xml</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Ui/DataProvider/TransferStock/External/Form/Modifier/General.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Block/Adminhtml/ManageStock/Stock/Fieldset/Product/Renderer/Qty.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Ui/DataProvider/TransferStock/External/Form/General.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Model/InstallManagement.php</file>
+            <file>file:/home/alex/Projects/OMS/source/inventoryplus/app/code/Magestore/InventorySuccess/Block/Adminhtml/TransferStock/AbstractTransferStock.php</file>
+        </group>
+    </open-files>
+</project-private>

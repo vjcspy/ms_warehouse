@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright © 2016 Magestore. All rights reserved.
+  ~ See COPYING.txt for license details.
+  -->
+
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">transferstock_request_form.transferstock_request_form_data_source</item>
+            <item name="deps" xsi:type="string">transferstock_request_form.transferstock_request_form_data_source</item>
+            <item name="namespace" xsi:type="string">transferstock_request_form</item>
+        </item>
+        <item name="buttons" xsi:type="array">
+            <item name="save_request" xsi:type="string">Magestore\InventorySuccess\Block\Adminhtml\TransferStock\Request\Edit\Button\SaveButton</item>
+            <item name="transfer" xsi:type="string">Magestore\InventorySuccess\Block\Adminhtml\TransferStock\Request\Edit\Button\TransferButton</item>
+        </item>
+        <item name="template" xsi:type="string">templates/form/collapsible</item>
+        <item name="config" xsi:type="array">
+            <item name="ajaxSaveType" xsi:type="string">simple</item>
+
+            <item name="namespace" xsi:type="string">transferstock_request_form</item>
+        </item>
+        <item name="reverseMetadataMerge" xsi:type="boolean">true</item>
+    </argument>
+    <dataSource name="transferstock_request_form_data_source">
+        <argument name="dataProvider" xsi:type="configurableObject">
+            <argument name="class" xsi:type="string">Magestore\InventorySuccess\Ui\DataProvider\TransferStock\Request\Form\RequestStock</argument>
+            <argument name="name" xsi:type="string">transferstock_request_form_data_source</argument>
+            <argument name="primaryFieldName" xsi:type="string">transferstock_id</argument>
+            <argument name="requestFieldName" xsi:type="string">id</argument>
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="submit_url" xsi:type="url" path="inventorysuccess/transferstock_request/save"/>
+                </item>
+            </argument>
+        </argument>
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+            </item>
+        </argument>
+    </dataSource>
+
+    <!--<fieldset name="init_general" class="Magestore\InventorySuccess\Ui\Component\Form\Fieldset\TransferStock\InitGeneral">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="label" xsi:type="string" translate="true">Generate Information</item>
+                <item name="collapsible" xsi:type="boolean">true</item>
+            </item>
+        </argument>
+        <container name="messages">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string"/>
+                    <item name="component" xsi:type="string">Magento_Catalog/js/components/messages</item>
+                </item>
+            </argument>
+        </container>
+        <field name="transferstock_code">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">1</item>
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="required" xsi:type="boolean">true</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">true</item>
+                    </item>
+                    <item name="label" xsi:type="string" translate="true">Transfer Code#</item>
+                </item>
+            </argument>
+        </field>
+        <field name="source_warehouse_id">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">2</item>
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="formElement" xsi:type="string">select</item>
+                    <item name="required" xsi:type="boolean">true</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">true</item>
+                    </item>
+                    <item name="label" xsi:type="string" translate="true">Source Warehouse</item>
+                </item>
+            </argument>
+        </field>
+        <field name="des_warehouse_id">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">3</item>
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="formElement" xsi:type="string">select</item>
+                    <item name="required" xsi:type="boolean">true</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">true</item>
+                    </item>
+                    <item name="label" xsi:type="string" translate="true">Destination Warehouse</item>
+                </item>
+            </argument>
+        </field>
+
+        <field name="notifier_emails">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">4</item>
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="required" xsi:type="boolean">true</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">true</item>
+                    </item>
+                    <item name="label" xsi:type="string" translate="true">Notifer Emails</item>
+                </item>
+            </argument>
+        </field>
+        <field name="reason">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">5</item>
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="formElement" xsi:type="string">textarea</item>
+                    <item name="required" xsi:type="boolean">true</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">true</item>
+                    </item>
+                    <item name="label" xsi:type="string" translate="true">Reason</item>
+                </item>
+            </argument>
+        </field>
+    </fieldset>
+
+
+    <fieldset name="product_list" class="Magestore\InventorySuccess\Ui\Component\Form\Fieldset\TransferStock\ProductList">
+    <argument name="data" xsi:type="array">
+        <item name="config" xsi:type="array">
+            <item name="label" xsi:type="string" translate="true">Product List</item>
+            <item name="collapsible" xsi:type="boolean">true</item>
+        </item>
+    </argument>
+    <container name="messages">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="label" xsi:type="string"/>
+                <item name="component" xsi:type="string">Magento_Catalog/js/components/messages</item>
+            </item>
+        </argument>
+    </container>
+    <container name="product_list_container">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="sortOrder" xsi:type="number">160</item>
+            </item>
+        </argument>
+        <button name="add_products_button">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="title" xsi:type="string">Add Products</item>
+                    <item name="actions" xsi:type="array">
+                        <item name="0" xsi:type="array">
+                            <item name="targetName" xsi:type="string">${ $.parentName}.add_product_modal</item>
+                            <item name="actionName" xsi:type="string">openModal</item>
+                        </item>
+                    </item>
+                </item>
+            </argument>
+        </button>
+        <button name="import_products_button">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="title" xsi:type="string">Import Products</item>
+                    <item name="actions" xsi:type="array">
+                        <item name="0" xsi:type="array">
+                            <item name="targetName" xsi:type="string">${ $.parentName}.import_product_modal</item>
+                            <item name="actionName" xsi:type="string">openModal</item>
+                        </item>
+                    </item>
+                </item>
+            </argument>
+        </button>
+
+        <modal name="add_product_modal">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="onCancel" xsi:type="string">actionCancel</item>
+                    <item name="options" xsi:type="array">
+                        <item name="buttons" xsi:type="array">
+                            <item name="0" xsi:type="array">
+                                <item name="text" xsi:type="string">Cancel</item>
+                                <item name="class" xsi:type="string">action-secondary</item>
+                                <item name="actions" xsi:type="array">
+                                    <item name="0" xsi:type="string">actionCancel</item>
+                                </item>
+                            </item>
+                            <item name="1" xsi:type="array">
+                                <item name="text" xsi:type="string">Clear</item>
+                                <item name="class" xsi:type="string">action-secondary</item>
+                                <item name="actions" xsi:type="array">
+                                    <item name="0" xsi:type="array">
+                                        <item name="targetName" xsi:type="string">${ $.name }.testField</item>
+                                        <item name="actionName" xsi:type="string">clear</item>
+                                    </item>
+                                </item>
+                            </item>
+                            <item name="2" xsi:type="array">
+                                <item name="text" xsi:type="string">Done</item>
+                                <item name="class" xsi:type="string">action-primary</item>
+                                <item name="actions" xsi:type="array">
+                                    <item name="0" xsi:type="string">actionDone</item>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                </item>
+            </argument>
+            <container name="assign_products_container">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="sortOrder" xsi:type="number">160</item>
+                    </item>
+                </argument>
+                <insertListing name="productListingInsert">
+                    <argument name="data" xsi:type="array">
+                        <item name="config" xsi:type="array">
+                            <item name="autoRender" xsi:type="boolean">true</item>
+                            <item name="ns" xsi:type="string">product_stock_listing</item>
+                        </item>
+                    </argument>
+                </insertListing>
+            </container>
+        </modal>
+
+        <modal name="import_product_modal">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="onCancel" xsi:type="string">actionCancel</item>
+                    <item name="options" xsi:type="array">
+                        <item name="buttons" xsi:type="array">
+                            <item name="0" xsi:type="array">
+                                <item name="text" xsi:type="string">Cancel</item>
+                                <item name="class" xsi:type="string">action-secondary</item>
+                                <item name="actions" xsi:type="array">
+                                    <item name="0" xsi:type="string">actionCancel</item>
+                                </item>
+                            </item>
+                            <item name="1" xsi:type="array">
+                                <item name="text" xsi:type="string">Clear</item>
+                                <item name="class" xsi:type="string">action-secondary</item>
+                                <item name="actions" xsi:type="array">
+                                    <item name="0" xsi:type="array">
+                                        <item name="targetName" xsi:type="string">${ $.name }.testField</item>
+                                        <item name="actionName" xsi:type="string">clear</item>
+                                    </item>
+                                </item>
+                            </item>
+                            <item name="2" xsi:type="array">
+                                <item name="text" xsi:type="string">Done</item>
+                                <item name="class" xsi:type="string">action-primary</item>
+                                <item name="actions" xsi:type="array">
+                                    <item name="0" xsi:type="string">actionDone</item>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                </item>
+            </argument>
+            <container name="import_products_container">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="sortOrder" xsi:type="number">160</item>
+                    </item>
+                </argument>
+                <insertListing name="importProductInsertForm">
+                    <argument name="data" xsi:type="array">
+                        <item name="config" xsi:type="array">
+                            <item name="autoRender" xsi:type="boolean">true</item>
+                            <item name="ns" xsi:type="string">transferstock_request_import_product_form</item>
+                        </item>
+                    </argument>
+                </insertListing>
+            </container>
+        </modal>
+
+        <insertListing name="Insert_Transferstock_Product_List">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="autoRender" xsi:type="boolean">false</item>
+                    <item name="ns" xsi:type="string">transferstock_product_list</item>
+                </item>
+            </argument>
+        </insertListing>
+    </container>
+    </fieldset>
+
+    <fieldset name="delivery_history" class="Magestore\InventorySuccess\Ui\Component\Form\Fieldset\TransferStock\DeliveryHistory">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="label" xsi:type="string" translate="true">Delivery History</item>
+                <item name="collapsible" xsi:type="boolean">true</item>
+            </item>
+        </argument>
+
+        <container name="messages">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string"/>
+                    <item name="component" xsi:type="string">Magento_Catalog/js/components/messages</item>
+                </item>
+            </argument>
+        </container>
+        <button name="add_delivery_button">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="title" xsi:type="string">Add Delivery</item>
+                    <item name="sortOrder" xsi:type="number">1</item>
+                    <item name="actions" xsi:type="array">
+                        <item name="0" xsi:type="array">
+                            <item name="targetName" xsi:type="string">${ $.parentName}.add_delivery_modal</item>
+                            <item name="actionName" xsi:type="string">openModal</item>
+                        </item>
+                    </item>
+                </item>
+            </argument>
+        </button>
+        <button name="import_delivery_button">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="title" xsi:type="string">Import Delivery</item>
+                    <item name="sortOrder" xsi:type="number">2</item>
+                    <item name="actions" xsi:type="array">
+                        <item name="0" xsi:type="array">
+                            <item name="targetName" xsi:type="string">${ $.parentName}.import_delivery_modal</item>
+                            <item name="actionName" xsi:type="string">openModal</item>
+                        </item>
+                    </item>
+                </item>
+            </argument>
+        </button>
+        <container name="delivery_history_container">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">3</item>
+                </item>
+            </argument>
+            <insertListing name="insert_delivery_history_container">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="autoRender" xsi:type="boolean">true</item>
+                        <item name="ns" xsi:type="string">transferstock_delivery_history</item>
+                    </item>
+                </argument>
+            </insertListing>
+        </container>
+    </fieldset>
+
+    <fieldset name="receiving_history" class="Magestore\InventorySuccess\Ui\Component\Form\Fieldset\TransferStock\ReceivingHistory">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="label" xsi:type="string" translate="true">Receiving History</item>
+                <item name="collapsible" xsi:type="boolean">true</item>
+            </item>
+        </argument>
+
+        <container name="messages">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string"/>
+                    <item name="component" xsi:type="string">Magento_Catalog/js/components/messages</item>
+                </item>
+            </argument>
+        </container>
+        <button name="add_receiving_button">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="title" xsi:type="string">Add Receiving</item>
+                    <item name="sortOrder" xsi:type="number">1</item>
+                    <item name="actions" xsi:type="array">
+                        <item name="0" xsi:type="array">
+                            <item name="targetName" xsi:type="string">${ $.parentName}.add_receiving_modal</item>
+                            <item name="actionName" xsi:type="string">openModal</item>
+                        </item>
+                    </item>
+                </item>
+            </argument>
+        </button>
+        <button name="import_receiving_button">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="title" xsi:type="string">Import Receiving</item>
+                    <item name="sortOrder" xsi:type="number">2</item>
+                    <item name="actions" xsi:type="array">
+                        <item name="0" xsi:type="array">
+                            <item name="targetName" xsi:type="string">${ $.parentName}.import_receiving_modal</item>
+                            <item name="actionName" xsi:type="string">openModal</item>
+                        </item>
+                    </item>
+                </item>
+            </argument>
+        </button>
+        <container name="receiving_history_container">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">3</item>
+                </item>
+            </argument>
+            <insertListing name="insert_receiving_history_container">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="autoRender" xsi:type="boolean">true</item>
+                        <item name="ns" xsi:type="string">transferstock_receiving_history</item>
+                    </item>
+                </argument>
+            </insertListing>
+        </container>
+    </fieldset>
+
+    <fieldset name="StockSummary" class="Magestore\InventorySuccess\Ui\Component\Form\Fieldset\TransferStock\StockSummary">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="label" xsi:type="string" translate="true">Stock Summary</item>
+                <item name="collapsible" xsi:type="boolean">true</item>
+
+            </item>
+        </argument>
+
+        <container name="messages">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string"/>
+                    <item name="component" xsi:type="string">Magento_Catalog/js/components/messages</item>
+                </item>
+            </argument>
+        </container>
+
+        <container name="stock_summary_container">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">3</item>
+                </item>
+            </argument>
+            <insertListing name="insert_stock_summary_container">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="autoRender" xsi:type="boolean">true</item>
+                        <item name="ns" xsi:type="string">transferstock_request_stock_summary</item>
+                    </item>
+                </argument>
+            </insertListing>
+        </container>
+
+    </fieldset>-->
+
+</form>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright © 2016 Magestore. All rights reserved.
+  ~ See COPYING.txt for license details.
+  -->
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="editor"/>
+    <update handle="styles"/>
+    <head>
+        <css src="Magestore_InventorySuccess::css/inventory.css"/>
+    </head>
+    <referenceContainer name="content">
+        <block class="Magestore\InventorySuccess\Block\Adminhtml\Import\NoticeMessage"
+               name="inventory_success_message" template="Magestore_InventorySuccess::import/success/message.phtml" before="-"/>
+        <uiComponent name="os_transferstock_send_form"/>
+    </referenceContainer>
+    <referenceContainer name="os_transferstock_send_form">
+        <block class="Magestore\InventorySuccess\Block\Adminhtml\TransferStock\Import\ImportSendStockForm" name="import-send-form">
+            <arguments>
+                <argument name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true"> </item>
+                    <item name="collapsible" xsi:type="boolean">false</item>
+                    <item name="opened" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="string">22</item>
+                    <item name="canShow" xsi:type="boolean">true</item>
+                    <item name="componentType" xsi:type="string">fieldset</item>
+                </argument>
+            </arguments>
+        </block>
+        <block class="Magestore\InventorySuccess\Block\Adminhtml\TransferStock\Import\ImportSendStockReceivingForm" name="import-send-stock-receiving-form">
+            <arguments>
+                <argument name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true"> </item>
+                    <item name="collapsible" xsi:type="boolean">false</item>
+                    <item name="opened" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="string">22</item>
+                    <item name="canShow" xsi:type="boolean">true</item>
+                    <item name="componentType" xsi:type="string">fieldset</item>
+                </argument>
+            </arguments>
+        </block>
+    </referenceContainer>
+</page>
